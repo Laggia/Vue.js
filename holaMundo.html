@@ -9,78 +9,23 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
-				<div id="app">
-					<h4>Todos los valores de array</h4>
-					<ul>
-						<li v-for="(task, key, index ) in tasks">
-							<template>{{ key }}: {{ task.task }}</template>
-						</li>
-					</ul>
-					<hr>
-					<h4>Solo pendientes los valores de array</h4>
-					<ul>
-						<li v-for="task in tareasPendientes">
-							
-							<template>{{ task.task }}</template>
-						</li>
-					</ul>
-
-					<footer>
-						<p >&copy;  2017 Ojo de dios </p>
-					</footer>
-					<form @submit="createTask">
-						<input type="text" v-model="newTask" class="form-control">
-						<button class="tn btn-primary" >Crear Tarea</button>
-					</form>	
-				</div>											
+			<div id="main" class="col-md-8">
+				<ul>
+					<li v-for="(valor, key, index) in persona" >{{ index + 1 }}) {{ key }}: {{ valor }}</li>
+				</ul>	
+				<ul>
+					<li v-for="numero in numeros">{{ numero }}</li>
+				</ul>	
+				<ul>
+					<li v-for="dia in semana">{{ dia.numero }}: {{ dia.nombre }}</li>
+				</ul>	
 			</div>			
 		</div>
 	</div>
 	
 
 	
-	<script src="https://unpkg.com/vue@2.3.3"></script>
-		
-	<script>
-		new Vue ({
-			el: '#app',
-			data:{
-				newTask: '',
-				tasks:[
-					{
-						task: 'Lo mismo primero',
-						pending: true
-					},
-					{
-						task: 'Lo mismo primero',
-						pending: false
-					},
-					{
-						task: 'Lo mismo primero',
-						pending: true
-					},
-				]
-			},
-			computed: {
-				tareasPendientes: function(){
-					return this.tasks.filter(function(item){
-						return item.pending;
-					});
-				}				
-			},
-			methods:{
-				createTask: function(event){
-					event.preventDefault();
-					this.tasks.push({
-						task: this.newTask,
-						pending: false,
-					});
-					this.newTask ='';
-				}
-			},
-
-		});
-	</script>	
+	<script src="https://unpkg.com/vue@2.3.3"></script>		
+	<script src="js/vue.js"></script>	
 </body>
 </html>
