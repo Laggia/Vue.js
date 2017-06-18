@@ -5,20 +5,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Hello World</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div id="main" class="col-md-8">
-				<ul>
-					<li v-for="(valor, key, index) in persona" >{{ index + 1 }}) {{ key }}: {{ valor }}</li>
-				</ul>	
-				<ul>
-					<li v-for="numero in numeros">{{ numero }}</li>
-				</ul>	
-				<ul>
-					<li v-for="dia in semana">{{ dia.numero }}: {{ dia.nombre }}</li>
-				</ul>	
+				
+				<cita></cita>
+				<cita></cita>
+				<cita></cita>
+				
+				
+
 			</div>			
 		</div>
 	</div>
