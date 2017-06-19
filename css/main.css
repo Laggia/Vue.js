@@ -1,11 +1,16 @@
-.azul {
-	color: blue;
+h1 {
+	background-color: gray;
+	padding: 100px;
+	border: 1px solid black;
 }
 
-.rojo{
-	color: red;
+.ocultar-transition {
+	transition: all 7s linear;
 }
 
-.subrayado {
-	text-decoration: underline;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0
 }
