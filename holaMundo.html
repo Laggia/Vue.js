@@ -11,7 +11,9 @@
 	<div class="container">
 		<div class="row">
 			<div id="main" class="col-md-8 text-center">
-				<personas :lista="personas"></personas>
+				<input type="text" v-model="palabra" name="" value="" placeholder="Buscar...">
+				<personas :lista="tareas, palabra"></personas>
+
 			</div>			
 		</div>
 	</div>
